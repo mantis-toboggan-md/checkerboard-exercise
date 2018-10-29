@@ -1,11 +1,11 @@
 var tile = document.createElement("div");
-Object.assign(tile.style,{"width" : "11.1%", "float" : "left", "padding-bottom" : "11.1%", "background-color" : "red"});
+Object.assign(tile.style,{"width" : "11.1%", "float" : "left", "padding-bottom" : "11.1%"});
 for(var i = 0; i<100; i++){
   if(i & 1){
-    Object.assign(tile.style, {"background-color" : "black"});
+    tile.style.backgroundColor = `rgb(${255-(i*2)}, 255, 0)`;
   }
   else{
-    Object.assign(tile.style, {"background-color" : "red"});
+    tile.style.backgroundColor = `rgb(255, 0, ${255-(i*2)})`;
   }
   document.body.appendChild(tile.cloneNode(true));
 }
