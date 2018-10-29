@@ -12,7 +12,7 @@ for(var i = 0; i<100; i++){
 
 function colorChange(){
   for(var i = 0; i < 100; i++){
-  document.querySelectorAll("div")[i].style.backgroundColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
+  document.querySelectorAll("div:nth-of-type(2n-1)")[i].style.backgroundColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
   }
 }
 setInterval(colorChange, 2000);
